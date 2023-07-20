@@ -1,27 +1,19 @@
 input[type="text"] {
   padding: 12px 0;
 }
-
 input::placeholder {
   font-size: 20px;
   padding-left: 5px;
 }
-
 .main {
   padding-top: 4rem;
 }
-
-li>p {}
-
 ul {
-  width: 40%;
+  width: 45%;
 }
-
 ul li {
   width: 100%;
-  border: 5px solid red;
 }
-
 @media screen and (max-width: 560px) {
   .navbar-brand {
     text-align: center;
