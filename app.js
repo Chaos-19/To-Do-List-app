@@ -47,16 +47,24 @@ function populateTasks() {
 
     const status = listItemNode.querySelector('#status');
 
-    status.addEventListener('CheckboxStateChange', function(e) {
+    status.addEventListener('change', function(e) {
 
-      if (e.target.checked == true ) {
-        listItemNode.querySelector('.content').style.textDecoration = "light-throught"
+      if (e.target.checked == true) {
+        items[index].status = 'complete';
+        localStorage.setItem("todoList", JSON.stringify(items));
       } else {
-
+        items[index].status = 'ongoing';
+        localStorage.setItem("todoList", JSON.stringify(items));
       }
-    console.log("checked .....");
 
+      populateTasks();
     });
+
+
+    if (items[index].status === 'complete') {
+      listItemNode.querySelector('.content').style.textDecoration = "line-through"
+      status.checked = true;
+    }
 
 
     return itemsList.appendChild(listItemNode);
