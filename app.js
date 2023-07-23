@@ -26,7 +26,7 @@ function populateTasks() {
   items.forEach((taskObj, index) => {
     const liElement = ` 
     <li class="list-item d-flex gap-5 my-3 justify-content-between align-items-center p-2 py-3 border rounded shadow">
-     <div class="content fs-3">${taskObj.taskName}</div>
+     <div class="content fs-5">${taskObj.taskName}</div>
      <div class="input d-flex gap-3">
       <input type="checkbox" name="status" id="status" class="form-check" />
       <button class="btn" type="button">
